@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --main-navy: #1B1F3B;
+  --main-gold: #FFB800;
+  --main-gray: #6B7280;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50;
+  }
+
+  select {
+    @apply appearance-none bg-white;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+  }
+
+  select:not([disabled]) {
+    @apply cursor-pointer;
+  }
+
+  select:hover:not([disabled]) {
+    @apply border-gray-400;
+  }
+
+  select:focus {
+    @apply border-indigo-500 ring-1 ring-indigo-500 outline-none;
+  }
+}
